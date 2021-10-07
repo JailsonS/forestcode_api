@@ -8,17 +8,17 @@
     Este documento é divido em 4 seções:
 </p>
 
-1. PRINCIPAIS CONCEITOS
-2. REGRAS GERAIS RELACIONADOS AO CF
-3. TECNOLOGIAS UTILIZADAS
-4. PRODUTOS GERADOS
+1. **PRINCIPAIS CONCEITOS**
+2. **REGRAS GERAIS RELACIONADOS AO CF**
+3. **TECNOLOGIAS UTILIZADAS**
+4. **PRODUTOS GERADOS**
 
 ### Principais Conceitos
 
- - RESERVAL LEGAL (RL): área localizada no interior de uma propriedade ou posse rural, com a função de assegurar o uso econômico de modo sustentável dos recursos naturais do imóvel rural
- - ÁREA DE PRESERVAÇÃO PERMANENTE (APP): área protegida, coberta ou não por vegetação nativa, com a função ambiental de preservar os recursos hídricos, a paisagem, a estabilidade geológica e a biodiversidade, facilitar o fluxo gênico de fauna e flora, proteger o solo e assegurar o bem-estar das populações humanas
- - ÁREA RURAL CONSOLIDADA: área de imóvel rural com ocupação antrópica preexistente a 22 de julho de 2008, com edificações, benfeitorias ou atividades agrossilvipastoris, admitida, neste último caso, a adoção do regime de pousio
- - CADASTRO AMBIENTAL RURAL (CAR): instrumento estabelecido pelo CF onde são cadastradas as áreas de APP, RL, Uso Antrópico, entre outras.
+ - **RESERVAL LEGAL (RL)**: área localizada no interior de uma propriedade ou posse rural, com a função de assegurar o uso econômico de modo sustentável dos recursos naturais do imóvel rural
+ - **ÁREA DE PRESERVAÇÃO PERMANENTE (APP)**: área protegida, coberta ou não por vegetação nativa, com a função ambiental de preservar os recursos hídricos, a paisagem, a estabilidade geológica e a biodiversidade, facilitar o fluxo gênico de fauna e flora, proteger o solo e assegurar o bem-estar das populações humanas
+ - **ÁREA RURAL CONSOLIDADA**: área de imóvel rural com ocupação antrópica preexistente a 22 de julho de 2008, com edificações, benfeitorias ou atividades agrossilvipastoris, admitida, neste último caso, a adoção do regime de pousio
+ - **CADASTRO AMBIENTAL RURAL (CAR)**: instrumento estabelecido pelo CF onde são cadastradas as áreas de APP, RL, Uso Antrópico, entre outras.
 
 ### Regras Gerais Relacionadas ao Código Florestal
 
@@ -41,9 +41,9 @@
     As etapas necessárias para o cálculo dos itens acima estão expressos abaixo
 </P>
 
-1. Reserva Legal (RL)
+1. **Reserva Legal (RL)**
     - Cálculo da RL exigida para regularização do imóvel rural (RL exigida)
-        - RL exigida para imóveis até 4 módulos fiscais (MF)
+        - **RL exigida para imóveis até 4 módulos fiscais (MF)**
             - Etapas
                 1. Calcular o % de vegetação nativa em 22/07/2008
                 2. Calcular o % de vegetação nativa atual
@@ -65,10 +65,10 @@
                 1. Não implique em novos desmatamentos
                 2. Área esteja conservada ou em processo de recuperação
                 3. o proprietário ou possuidor do imóvel tenha requerido o CAR
-    - Passivo em RL
+    - **Passivo em RL**
         - Área desmatada após 22/07/2008 sem respaldo legal (DF PÓS 2008)
         - DF PÓS 2008 + % de área desmatada antes 22/07/2008 necessária para atingir o % de RL exigido 
-    - Cota de Reserva Ambiental (CRA) e Excedente de RL
+    - **Cota de Reserva Ambiental (CRA) e Excedente de R**L
         - Condições para gerar CRA:
             1. Imóvel sob regime de servidão ambiental 
             2. Correspondente à área de RL instituída sobre a vegetação que exceder os percentuais exigidos no art. 12
