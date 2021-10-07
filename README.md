@@ -1,7 +1,7 @@
 ## DESCRIÇÃO GERAL
 
 <p>
-    Este projeto visa o desenvolvimento de uma ferramenta que automatiza a leitura e a interpretação da Lei 12.651/20 mais conhecido como Código Florestal (CF). Esta lei é aplicada a todos os imóveis rurais nos diferentes biomas do Brasil, estabelecendo obrigatoriedades e instrumentos para proteção da vegetação nativa.  
+    Este projeto visa o desenvolvimento de uma ferramenta que automatiza a leitura e a interpretação da Lei 12.651/2012 mais conhecido como Código Florestal (CF). Esta lei é aplicada a todos os imóveis rurais nos diferentes biomas do Brasil, estabelecendo obrigatoriedades e instrumentos para proteção da vegetação nativa.  
 </p>
 
 <p>
