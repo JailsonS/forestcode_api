@@ -36,7 +36,6 @@
 - RL desmatada pós 2008 (passivo em RL): área de RL desmatada após 22/07/2008, sendo a sua restauração obrigatória por meio de técnicas para plantio inloco
 - RL desmatada compensável: área de RL desmatada antes de 22/07/2008, passivel de compensação da vegetação desmatada em outro imóvel
 - RL excedente: área de RL superior à RL exigida
-- 
 <P>
     As etapas necessárias para o cálculo dos itens acima estão expressos abaixo
 </P>
