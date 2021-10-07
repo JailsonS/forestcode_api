@@ -15,10 +15,10 @@
 
 ### Principais Conceitos
 
-    - RESERVAL LEGAL (RL): área localizada no interior de uma propriedade ou posse rural, com a função de assegurar o uso econômico de modo sustentável dos recursos naturais do imóvel rural
-    - ÁREA DE PRESERVAÇÃO PERMANENTE (APP): área protegida, coberta ou não por vegetação nativa, com a função ambiental de preservar os recursos hídricos, a paisagem, a estabilidade geológica e a biodiversidade, facilitar o fluxo gênico de fauna e flora, proteger o solo e assegurar o bem-estar das populações humanas
-    - ÁREA RURAL CONSOLIDADA: área de imóvel rural com ocupação antrópica preexistente a 22 de julho de 2008, com edificações, benfeitorias ou atividades agrossilvipastoris, admitida, neste último caso, a adoção do regime de pousio
-    - CADASTRO AMBIENTAL RURAL (CAR): instrumento estabelecido pelo CF onde são cadastradas as áreas de APP, RL, Uso Antrópico, entre outras.
+ - RESERVAL LEGAL (RL): área localizada no interior de uma propriedade ou posse rural, com a função de assegurar o uso econômico de modo sustentável dos recursos naturais do imóvel rural
+ - ÁREA DE PRESERVAÇÃO PERMANENTE (APP): área protegida, coberta ou não por vegetação nativa, com a função ambiental de preservar os recursos hídricos, a paisagem, a estabilidade geológica e a biodiversidade, facilitar o fluxo gênico de fauna e flora, proteger o solo e assegurar o bem-estar das populações humanas
+ - ÁREA RURAL CONSOLIDADA: área de imóvel rural com ocupação antrópica preexistente a 22 de julho de 2008, com edificações, benfeitorias ou atividades agrossilvipastoris, admitida, neste último caso, a adoção do regime de pousio
+ - CADASTRO AMBIENTAL RURAL (CAR): instrumento estabelecido pelo CF onde são cadastradas as áreas de APP, RL, Uso Antrópico, entre outras.
 
 ### Regras Gerais Relacionadas ao Código Florestal
 
