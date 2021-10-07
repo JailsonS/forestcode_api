@@ -52,7 +52,7 @@
                     1. 80% do imóvel em imóvel situado em áreas de floresta
                     2. 35% do imóvel em imóvel situado em cerrado
                     3. 20% do imóvel em imóvel situado em campos gerais
-                - Cenários de redução do % de RL exigida válidos para nos casos da alínea 'a)'
+                - Cenários de redução do % de RL exigida válidos para o caso da alínea 'a)'
                     - § 4º art. 12 poder público poderá reduzir a RL para 50% (somente fins de recomposição) SE:
                         1. Estado com mais de 50% do seu território ocupado por UC regularizada e TI homologada 
                     - § 5º art. 12 poder público ESTADUAL (ouvido COEMA) poderá reduzir para 50% (somente fins de recomposição) SE:
