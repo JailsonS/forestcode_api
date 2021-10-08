@@ -80,6 +80,10 @@ class EntityManagerFactory
         return self::$_conn;
     }
 
+    /**
+     * @param array $paths deve conter o dir raiz onde as entidades estão localizadas
+     * no caso, o dir src/
+     */
     private function _setupConfiguration(ORMConfiguration $config, array $paths): ORMConfiguration
     {
         $config->setProxyDir(__DIR__ . '/tmp');
@@ -89,6 +93,9 @@ class EntityManagerFactory
         return $config;
     }
 
+    /**
+     * @return retorna um objeto que configura o mapeamento dos atributos
+     */
     private function _getMappingDriver(array $paths): MappingDriver
     {
         return new AttributeDriver($paths);
