@@ -4,8 +4,6 @@ namespace Src\Infra\Database;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
-use Doctrine\Common\Annotations\AnnotationReader;
-use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
 use Dotenv\Dotenv;
 use Jsor\Doctrine\PostGIS\Event\ORMSchemaEventSubscriber;
 
