@@ -62,7 +62,7 @@ class EntityManagerFactory
             
             Configurator::configure(self::$_conn->getConfiguration());
         } else {
-            self::$_conn = DriverManager::getConnection($this->_getDbParams(), new DBALConfiguration());
+            self::$_conn = DriverManager::getConnection($this->getDbParams(), new DBALConfiguration());
 
             self::$_conn->getEventManager()->addEventSubscriber(new DBALSchemaEventSubscriber());
         }
