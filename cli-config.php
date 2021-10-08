@@ -8,6 +8,6 @@ require_once 'vendor/autoload.php';
 
 // replace with mechanism to retrieve EntityManager in your app
 $entityManagerFactory = new EntityManagerFactory();
-$entityManager = $entityManagerFactory->getEntityManager();
+$entityManager = $entityManagerFactory->_getEntityManager();
 
 return ConsoleRunner::createHelperSet($entityManager);

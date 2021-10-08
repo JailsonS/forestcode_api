@@ -8,16 +8,16 @@ use Jsor\Doctrine\PostGIS\Types\PostGISType;
 class Propriedade
 {
     #[ORM\Id]
-    #[ORM\Column(type: integer)]
+    #[ORM\Column(type: "integer")]
     #[ORM\GeneratedValue(strategy: "IDENTITY")]
     private int $id;
 
-    #[ORM\Column(type: string, nullable:false, length: 150)]
+    #[ORM\Column(type: "string", nullable:false, length: 150)]
     private string $nome;
 
-    #[ORM\Column(type:float, precision:4, nullable:true)]
+    #[ORM\Column(type: "float", precision:4, nullable:true)]
     private float $area;
     
-    #[ORM\Column(type:float, precision:4, nullable:true)]
+    #[ORM\Column(type:"float", precision:4, nullable:true)]
     private float $mf;
 }

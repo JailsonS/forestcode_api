@@ -19,7 +19,7 @@ services:
         - 5432:5432
         container_name: db
         environment:
-            POSTGRES_PASSWORD: root
+            POSTGRES_PASSWORD: postgres
             POSTGRES_DB: forestcode
             POSTGRES_USER: postgres
         volumes:
@@ -36,7 +36,7 @@ services:
         volumes:
             - pgadmin:/var/lib/pgadmin
         ports:
-            - 5050:8080
+            - 5050:80
         networks: 
             - production-network
         depends_on:

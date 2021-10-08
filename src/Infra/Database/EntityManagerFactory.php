@@ -3,6 +3,7 @@ namespace Src\Infra\Database;
 
 use Dotenv\Dotenv;
 use Doctrine\DBAL\Connection;
+use Doctrine\DBAL\Types\Type;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 use Doctrine\DBAL\DriverManager;
