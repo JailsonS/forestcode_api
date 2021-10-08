@@ -4,7 +4,6 @@ namespace Src\Infra\Database;
 use Dotenv\Dotenv;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Types\Type;
-use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -21,8 +20,6 @@ class EntityManagerFactory
     private static ?Connection $_conn = null;
 
     private ?EntityManagerInterface $_em = null;
-
-    private ?SchemaTool $_schemaTool = null;
     
     private array $dbParams = [];
 

@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Jsor\Doctrine\PostGIS\Types\PostGISType;
 
 
-class Municipios
+class Municipio
 {
 
     private int $id;
