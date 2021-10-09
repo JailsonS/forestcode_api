@@ -1,5 +1,5 @@
 <?php
-namespace Src\Domain\Propriedade;
+namespace Src\Domain\Farm;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Collection;
@@ -7,7 +7,7 @@ use Jsor\Doctrine\PostGIS\Types\PostGISType;
 use Doctrine\Common\Collections\ArrayCollection;
 
 #[ORM\Entity]
-class Municipio
+class Municipality
 {
     #[ORM\Id]
     #[ORM\Column(type: "integer")]
@@ -18,7 +18,7 @@ class Municipio
     public int $cod_ibge;
 
     #[ORM\Column(type: "string", nullable:false, length: 150)]
-    public string $nome;
+    public string $name;
 
     #[ORM\Column(type: "string", columnDefinition: "CHAR(2) NOT NULL")]
     public string $uf;
@@ -26,20 +26,19 @@ class Municipio
     #[ORM\Column(type: "float", precision: 4, nullable:false)]
     public float $mf;
 
+    #[ORM\Column(type: "float", precision: 4, nullable:false)]
+    public float $area;
+
     #[ORM\OneToMany(
-        targetEntity: "Propriedade",
-        mappedBy: "municipio",
+        targetEntity: "Farm",
+        mappedBy: "municipality",
         cascade: ["all"]
     )]
-    private ArrayCollection $propriedades;
+    private ArrayCollection $farms;
 
-    public function __construct (int $codIgbe, string $nome, string $uf, float $mf) 
+    public function __construct () 
     {
-        $this->cod_ibge = $codIgbe;
-        $this->nome = $nome;
-        $this->uf = $uf;
-        $this->mf = $mf;
-        $this->propriedade = new ArrayCollection();
+        $this->farms = new ArrayCollection();
     }
 
     public function id(): int
@@ -49,27 +48,32 @@ class Municipio
 
     public function __toString(): string
     {
-        return "{$this->nome} - {$this->uf}";
+        return "{$this->name} - {$this->uf}";
     }
 
-    public function nome(): string
+    public function getName(): string
     {
-        return $this->nome;
+        return $this->name;
     }
 
-    public function mf(): float 
+    public function getMf(): float 
     {   
         return $this->mf;
     }
 
-    public function addPropriedade(Propriedade $propriedade): self
+    public function addFarm(Farm $farm): self
     {
-        $this->propriedades-add($propriedade);
+        $this->farms->add($farm);
         return $this;
     }
 
-    public function propriedades(): Collection
+    public function getArea(): float
     {
-        return $this->propriedades;
+        return $this->area;
+    }
+
+    public function getFarms(): Collection
+    {
+        return $this->farms;
     }
 }
