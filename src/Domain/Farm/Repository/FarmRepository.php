@@ -43,8 +43,11 @@ class FarmRepository extends EntityRepository implements FarmRepositoryInterface
      */
     public function calculateArea(Farm $farm)
     {
+
+        $class = new \ReflectionClass($farm);
+        
         $query = $this->em->createQuery(
-            "SELECT ST_Area(ST_GeomFromText({$farm->geom})) AS value FROM {$farm} polygon"
+            "SELECT ST_Area(ST_GeomFromText({$farm->geom})) AS value FROM {$class->getName()} polygon"
         );
 
         $result = $query->getSingleResult();
