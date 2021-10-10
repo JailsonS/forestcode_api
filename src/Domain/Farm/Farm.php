@@ -29,7 +29,7 @@ class Farm
 
     #[ORM\Column(
         type: PostGISType::GEOMETRY, 
-        options: ['geometry_type' => 'POLYGON', 'srid' => 3785],
+        options: ['geometry_type' => 'POLYGON', 'srid' => 5641],
     )]
     private string $geom;
 
@@ -64,6 +64,12 @@ class Farm
     public function addGeometry(string $geom): self
     {
         $this->geom = $geom;
+        return $this;
+    }
+
+    public function addArea(float $area): self
+    {   
+        $this->area = $area;
         return $this;
     }
 

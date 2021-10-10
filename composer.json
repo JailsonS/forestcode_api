@@ -13,7 +13,7 @@
     "require": {
         "doctrine/migrations": "^3.2",
         "doctrine/orm": "^2.9",
-        "symfony/yaml": "2.*",
+        "symfony/yaml": "^5.3",
         "symfony/cache": "^5.3",
         "vlucas/phpdotenv": "^5.3",
         "jsor/doctrine-postgis": "^1.8"

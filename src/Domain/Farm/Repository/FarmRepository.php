@@ -14,27 +14,37 @@ class FarmRepository extends EntityRepository implements FarmRepositoryInterface
         $this->em = $this->getEntityManager();
     }
 
-    public function addFarm(string $farmName, Municipality $municipality, string $geom): void
+    public function addFarm(string $farmName, Municipality $municipality, string $geom)
     {
+        // create farm
         $farm = new Farm($farmName, $municipality);
         
-        $wktGeom = new WKTGeom($geom, $farm);
+        // add geometry
+        $farm->addGeometry($geom);
 
-        $farm->addGeometry($wktgeom);
-        $farm = $this->calculateArea($farm);
+        // persist entity
+        $this->em->persist($farm);
+        
+        // insert to database
+        $this->em->flush();
+        
+        // calculate area and fiscal module
+        $farm->addArea($this->calculateArea($farm));
         $farm->calculateMf();
 
-        $this->em->persist($farm);
+        // insert to database
         $this->em->flush();
+        $this->em->clear();
+
     }
 
     /**
      * @return Farm retorna o objeto com a propriedade area calculada em hectares (unidade padrão do projeto)
      */
-    private function calculateArea(Farm $farm)//: Farm
+    public function calculateArea(Farm $farm)
     {
         $query = $this->em->createQuery(
-            "SELECT ST_Area(ST_GeomFromText({$farm->geom})) AS value FROM {$farm}"
+            "SELECT ST_Area(ST_GeomFromText({$farm->geom})) AS value FROM {$farm} polygon"
         );
 
         $result = $query->getSingleResult();
