@@ -42,28 +42,27 @@
 
 1. **Reserva Legal (RL)**
     - Cálculo da RL exigida para regularização do imóvel rural (RL exigida)
-        - **RL exigida para imóveis até 4 módulos fiscais (MF)**
-            - Etapas
-                1. Calcular o % de vegetação nativa em 22/07/2008
-                2. Calcular o % de vegetação nativa atual
-                3. Calcular a área desmatada após 22/07/2008
-            - Cenários estabelecidos pelo CF
-                - Regra geral estabelecida pelo Art. 12 lei 12.651/2012
-                    1. 80% do imóvel em imóvel situado em áreas de floresta
-                    2. 35% do imóvel em imóvel situado em cerrado
-                    3. 20% do imóvel em imóvel situado em campos gerais
-                - Cenários de redução do % de RL exigida válidos para o caso da alínea 'a)'
-                    - § 4º art. 12 poder público poderá reduzir a RL para 50% (somente fins de recomposição) SE:
-                        1. Estado com mais de 50% do seu território ocupado por UC regularizada e TI homologada 
-                    - § 5º art. 12 poder público ESTADUAL (ouvido COEMA) poderá reduzir para 50% (somente fins de recomposição) SE:
-                        1. Estado possuir Zoneamento Ecológico Econômico (ZEE) aprovado
-                        2. Estado possuir mais de 65% do seu território ocupado por UC regularizada e TI homologada 
-                    - art. 13 inciso I
-                        1. Reduzir para fins de <strong>reguralização</strong> para até 50% da propriedade, a RL de imóveis com área consolidada 
-            - cômputo da APP no cálculo do % de RL
-                1. Não implique em novos desmatamentos
-                2. Área esteja conservada ou em processo de recuperação
-                3. o proprietário ou possuidor do imóvel tenha requerido o CAR
+        - Etapas
+            1. Calcular o % de vegetação nativa em 22/07/2008
+            2. Calcular o % de vegetação nativa atual
+            3. Calcular a área desmatada após 22/07/2008
+        - Cenários estabelecidos pelo CF
+            - Regra geral estabelecida pelo Art. 12 lei 12.651/2012 (RL exigida por lei)
+                * A. 80% do imóvel em imóvel situado em áreas de floresta
+                * B. 35% do imóvel em imóvel situado em cerrado
+                * C. 20% do imóvel em imóvel situado em campos gerais
+            - Cenários de redução do % de RL exigida válidos para o caso da alínea 'a)'
+                - § 4º art. 12 poder público poderá reduzir a RL para 50% (somente fins de recomposição) SE:
+                    1. Estado com mais de 50% do seu território ocupado por UC regularizada e TI homologada 
+                - § 5º art. 12 poder público ESTADUAL (ouvido COEMA) poderá reduzir para 50% (somente fins de recomposição) SE:
+                    1. Estado possuir Zoneamento Ecológico Econômico (ZEE) aprovado
+                    2. Estado possuir mais de 65% do seu território ocupado por UC regularizada e TI homologada 
+                - art. 13 inciso I
+                    1. Reduzir para fins de <strong>reguralização</strong> para até 50% da propriedade, a RL de imóveis com área consolidada 
+        - cômputo da APP no cálculo do % de RL
+            1. Não implique em novos desmatamentos
+            2. Área esteja conservada ou em processo de recuperação
+            3. o proprietário ou possuidor do imóvel tenha requerido o CAR
     - **Passivo em RL**
         - Área desmatada após 22/07/2008 sem respaldo legal (DF PÓS 2008)
         - DF PÓS 2008 + % de área desmatada antes 22/07/2008 necessária para atingir o % de RL exigido 
