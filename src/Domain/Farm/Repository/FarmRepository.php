@@ -38,37 +38,25 @@ class FarmRepository extends EntityRepository implements FarmRepositoryInterface
     /**
      * @return Farm retorna o objeto com a propriedade area calculada em hectares (unidade padrão do projeto)
      */
-    public function calculateArea(Farm $farm)
+    public function calculateArea(Farm $farm): float
     {
         $em = $this->getEntityManager();
 
         $query = $em->createQuery(
             "SELECT 
-                ST_Area(ST_GeomFromText('{$farm->getGeom()}',{$farm->getSrid()})) AS value 
+                ST_Area(
+                    ST_GeomFromText('{$farm->getGeom()}',{$farm->getSrid()})
+                ) AS value 
             FROM Src\Domain\Farm\Farm polygon
             WHERE
-                id = :id"
+                polygon.id = :id"
         );
 
         $query->setParameters(['id' => $farm->id()]);
 
-        $result = $query->getResult();
+        $result = $query->getSingleResult();
 
-        print_r($result); exit;
-
-        /*
-        array_walk_recursive($result, static function (&$data): void {
-            if (is_resource($data)) {
-                $data = stream_get_contents($data);
-
-                if (false !== ($pos = strpos($data, 'x'))) {
-                    $data = substr($data, $pos + 1);
-                }
-            }
-
-            $data = (float) $data;
-        });
-        */
+        return $result['value'];
     }
 
 
