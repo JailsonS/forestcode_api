@@ -29,7 +29,7 @@ class Farm
 
     #[ORM\Column(
         type: PostGISType::GEOMETRY, 
-        options: ['geometry_type' => 'MULTIPOLYGON', 'srid' => 5641],
+        options: ['geometry_type' => 'POLYGON', 'srid' => 5641],
     )]
     private string $geom;
 
