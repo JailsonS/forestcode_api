@@ -41,8 +41,6 @@ class FarmRepository extends EntityRepository implements FarmRepositoryInterface
     public function calculateArea(Farm $farm)
     {
         $em = $this->getEntityManager();
-        
-        $class = new \ReflectionClass($farm);
 
         $query = $em->createQuery(
             "SELECT 
