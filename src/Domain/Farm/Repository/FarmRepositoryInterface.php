@@ -2,6 +2,7 @@
 namespace Src\Domain\Farm\Repository;
 
 use Src\Domain\Farm\Farm;
+use Src\Domain\Farm\Municipality;
 use Doctrine\Common\Collections\Collection;
 
 interface FarmRepositoryInterface

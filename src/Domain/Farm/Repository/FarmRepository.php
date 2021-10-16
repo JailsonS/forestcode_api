@@ -3,36 +3,35 @@
 namespace Src\Domain\Farm\Repository;
 
 use Src\Domain\Farm\Farm;
+use Src\Domain\Farm\Municipality;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\EntityManagerInterface;
+use Src\Domain\Farm\Repository\FarmRepositoryInterface;
 
 class FarmRepository extends EntityRepository implements FarmRepositoryInterface
 {
-    private ?EntityManagerInterface $em = null;
-
-    public function __construct()
-    {
-        $this->em = $this->getEntityManager();
-    }
 
     public function addFarm(string $farmName, Municipality $municipality, string $geom)
     {
+        $em = $this->getEntityManager();
+
         // create farm
         $farm = new Farm($farmName, $municipality);
         
         $farm->addGeometry($geom);
 
-        $this->em->persist($farm);
+        $em->persist($farm);
         
         // insert to database
-        $this->em->flush();
+        $em->flush();
         
         // calculate area and fiscal module
         $farm->addArea($this->calculateArea($farm));
         $farm->calculateMf();
 
         // insert to database
-        $this->em->flush();
-        $this->em->clear();
+        $em->flush();
+        $em->clear();
 
     }
 
@@ -41,10 +40,11 @@ class FarmRepository extends EntityRepository implements FarmRepositoryInterface
      */
     public function calculateArea(Farm $farm)
     {
-
+        $em = $this->getEntityManager();
+        
         $class = new \ReflectionClass($farm);
         
-        $query = $this->em->createQuery(
+        $query = $em->createQuery(
             "SELECT ST_Area(ST_GeomFromText({$farm->getGeom()})) AS value FROM {$class->getName()} polygon"
         );
 
