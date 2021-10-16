@@ -40,6 +40,10 @@ class Farm
         $this->municipality = $municipality;
     }
 
+    public function id(): int
+    {
+        return $this->id;
+    }
 
     public function getName(): string
     {
@@ -53,7 +57,16 @@ class Farm
 
     public function getGeom(): string
     {
-        return $this->geom;
+        $geom = explode(';', $this->geom);
+
+        return $geom[1];
+    }
+
+    public function getSrid(): string
+    {
+        $geom = explode(';', $this->geom);
+        $srid = explode('=', $geom[0]);
+        return $srid[1];
     }
 
     public function getMunicipality(): string
