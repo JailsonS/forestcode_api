@@ -28,17 +28,23 @@ class Municipality
 
     #[ORM\Column(type: "float", precision: 4, nullable:false)]
     public float $area;
+    
+    #[ORM\Column(
+        type: PostGISType::GEOMETRY, 
+        options: ['geometry_type' => 'MULTIPOLYGON', 'srid' => 5641],
+    )]
+    public string $geom;
 
     #[ORM\OneToMany(
         targetEntity: "Farm",
         mappedBy: "municipality",
         cascade: ["all"]
     )]
-    private ArrayCollection $farms;
+    private Collection $farms;
 
     public function __construct () 
     {
-        $this->farms = new ArrayCollection();
+        $this->farms = new Collection();
     }
 
     public function id(): int
@@ -75,5 +81,10 @@ class Municipality
     public function getFarms(): Collection
     {
         return $this->farms;
+    }
+
+    public function getCodIbge(): int
+    {
+        return $this->cod_ibge;
     }
 }

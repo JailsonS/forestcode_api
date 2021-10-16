@@ -19,10 +19,8 @@ class FarmRepository extends EntityRepository implements FarmRepositoryInterface
         // create farm
         $farm = new Farm($farmName, $municipality);
         
-        // add geometry
         $farm->addGeometry($geom);
 
-        // persist entity
         $this->em->persist($farm);
         
         // insert to database

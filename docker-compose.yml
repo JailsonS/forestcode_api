@@ -47,4 +47,3 @@ volumes:
 networks:
     production-network: 
         driver: bridge
-
