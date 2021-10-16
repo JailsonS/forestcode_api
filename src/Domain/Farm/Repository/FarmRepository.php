@@ -75,6 +75,9 @@ class FarmRepository extends EntityRepository implements FarmRepositoryInterface
         } else {
             $shp = new ShapefileReader('myshape.shp');
         } 
+
+        // close stream
+        $shp = null;
     }
     */
 
