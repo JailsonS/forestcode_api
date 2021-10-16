@@ -12,4 +12,6 @@ interface FarmRepositoryInterface
     public function addFarm(string $farmName, Municipality $municipality, string $geom);
 
     public function calculateArea(Farm $farm);
+
+    //public function uploadFarms(string|array $files): void;
 }

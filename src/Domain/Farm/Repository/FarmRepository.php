@@ -2,7 +2,9 @@
 
 namespace Src\Domain\Farm\Repository;
 
+use Shapefile\Shapefile;
 use Src\Domain\Farm\Farm;
+use Shapefile\ShapefileReader;
 use Src\Domain\Farm\Municipality;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -32,7 +34,6 @@ class FarmRepository extends EntityRepository implements FarmRepositoryInterface
         // insert to database
         $em->flush();
         $em->clear();
-
     }
 
     /**
@@ -46,7 +47,7 @@ class FarmRepository extends EntityRepository implements FarmRepositoryInterface
             "SELECT 
                 ST_Area(
                     ST_GeomFromText('{$farm->getGeom()}',{$farm->getSrid()})
-                ) AS value 
+                ) / 10000 AS value 
             FROM Src\Domain\Farm\Farm polygon
             WHERE
                 polygon.id = :id"
@@ -58,6 +59,24 @@ class FarmRepository extends EntityRepository implements FarmRepositoryInterface
 
         return $result['value'];
     }
+
+    /*
+    public function uploadFarms(string|array $files): void
+    {
+
+        if(is_array($files)) {
+
+            $shp = new ShapefileReader([
+                Shapefile::FILE_SHP => fopen('/path/to/file.shp', 'rb'),
+                Shapefile::FILE_SHX => fopen('/path/to/file.shx', 'rb'),
+                Shapefile::FILE_DBF => fopen('/path/to/file.dbf', 'rb'),
+            ]);
+            
+        } else {
+            $shp = new ShapefileReader('myshape.shp');
+        } 
+    }
+    */
 
 
 }
