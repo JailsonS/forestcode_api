@@ -60,26 +60,15 @@ class FarmRepository extends EntityRepository implements FarmRepositoryInterface
         return $result['value'];
     }
 
-    /*
-    public function uploadFarms(string|array $files): void
+    public function uploadFarms(array $files): void
     {
-
-        if(is_array($files)) {
-
-            $shp = new ShapefileReader([
-                Shapefile::FILE_SHP => fopen('/path/to/file.shp', 'rb'),
-                Shapefile::FILE_SHX => fopen('/path/to/file.shx', 'rb'),
-                Shapefile::FILE_DBF => fopen('/path/to/file.dbf', 'rb'),
-            ]);
-            
-        } else {
-            $shp = new ShapefileReader('myshape.shp');
-        } 
+        $shp = new ShapefileReader([
+            Shapefile::FILE_SHP => fopen($files['shp'], 'rb'),
+            Shapefile::FILE_SHX => fopen($files['shx'], 'rb'),
+            Shapefile::FILE_DBF => fopen($files['dbf'], 'rb'),
+        ]);
 
         // close stream
         $shp = null;
     }
-    */
-
-
 }
