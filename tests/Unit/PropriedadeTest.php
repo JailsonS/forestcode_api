@@ -12,6 +12,10 @@ beforeEach(function () {
 });
 
 
+afterEach(function () {
+    $this->em->clear();
+});
+
 test('O formato do município ao qual uma propriedade está localizada de ve ser: MUNICÍPIO - UF', function() {
 
     // arrange
