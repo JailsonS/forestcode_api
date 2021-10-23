@@ -25,6 +25,7 @@ class Farm
     #[ORM\Column(type:"float", precision:4, nullable:true)]
     private float $mf;
 
+    #[ORM\Column(type: "string", nullable:false, length: 150)]
     private string $sizeClass;
 
     #[ORM\ManyToOne(targetEntity: "Municipality", cascade: ["all"], fetch: "EAGER")]
