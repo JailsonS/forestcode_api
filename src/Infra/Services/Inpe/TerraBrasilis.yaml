@@ -1,0 +1,378 @@
+---
+swagger: "2.0"
+info:
+  description: This is the description of TerraBrasilis Analytics API.
+  version: 1.0.0
+  title: Dashboard Analytics API
+  contact:
+    email: luizffga@gmail.com
+host: virtserver.swaggerhub.com
+basePath: /TerraBrasilis/TerraBrasilisAnalyticsAPI/1.0.0
+tags:
+- name: apps
+  description: application identifier
+  externalDocs:
+    description: Find out more
+    url: http://github.com/terrabrasilis/terrabrasilisAnalyticsAPI
+- name: config
+  description: file configurations
+  externalDocs:
+    description: Find out more
+    url: http://github.com/terrabrasilis/terrabrasilisAnalyticsAPI
+- name: data
+  description: data projects
+  externalDocs:
+    description: Find out more about our store
+    url: http://github.com/terrabrasilis/terrabrasilisAnalyticsAPI
+schemes:
+- https
+- http
+paths:
+  /apps/identifier:
+    get:
+      tags:
+      - apps
+      summary: Get an application identifier
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Application'
+  /config/periods:
+    get:
+      tags:
+      - config
+      summary: Get periods from an application
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Period'
+  /config/classes:
+    get:
+      tags:
+      - config
+      summary: Get classes from an application
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Class'
+  /config/lois:
+    get:
+      tags:
+      - config
+      summary: Get lois from an application
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Loi'
+  /config/loinames:
+    get:
+      tags:
+      - config
+      summary: Get loinames from an application
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Loiname'
+  /config/filters:
+    get:
+      tags:
+      - config
+      summary: Get filters from an application
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Filter'
+  /data/{dataId}:
+    get:
+      tags:
+      - data
+      summary: Get deforestation data from an application
+      produces:
+      - application/json
+      parameters:
+      - name: dataId
+        in: path
+        description: ID of data to return
+        required: true
+        type: integer
+        format: int64
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Data'
+  /data/{dataId}/{loinameId}:
+    get:
+      tags:
+      - data
+      summary: Get deforestation data from an application
+      produces:
+      - application/json
+      parameters:
+      - name: dataId
+        in: path
+        description: ID of data to return
+        required: true
+        type: integer
+        format: int64
+      - name: loinameId
+        in: path
+        description: ID of loiname to return
+        required: true
+        type: integer
+        format: int64
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Data'
+definitions:
+  Application:
+    type: object
+    properties:
+      identifier:
+        type: string
+      name:
+        type: string
+      created:
+        type: string
+        format: date-time
+    xml:
+      name: Order
+  Period:
+    type: object
+    properties:
+      data:
+        $ref: '#/definitions/Period_data'
+    xml:
+      name: Category
+  Class:
+    type: object
+    properties:
+      data:
+        $ref: '#/definitions/Class_data'
+    xml:
+      name: Category
+  Loi:
+    type: object
+    properties:
+      data:
+        $ref: '#/definitions/Loi_data'
+    xml:
+      name: Category
+  Loiname:
+    type: object
+    properties:
+      data:
+        $ref: '#/definitions/Loiname_data'
+    xml:
+      name: Category
+  Filter:
+    type: object
+    properties:
+      data:
+        $ref: '#/definitions/Filter_data'
+    xml:
+      name: Category
+  Data:
+    type: object
+    properties:
+      data:
+        $ref: '#/definitions/Data_data'
+  Period_data_periods_startDate:
+    type: object
+    properties:
+      year:
+        type: integer
+        format: int32
+      month:
+        type: integer
+        format: int32
+      day:
+        type: integer
+        format: int32
+  Period_data_periods:
+    type: object
+    properties:
+      startDate:
+        $ref: '#/definitions/Period_data_periods_startDate'
+      endDate:
+        $ref: '#/definitions/Period_data_periods_startDate'
+  Period_data:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      description:
+        type: string
+      periods:
+        $ref: '#/definitions/Period_data_periods'
+  Class_data_classes_startDate:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      description:
+        type: string
+  Class_data_classes:
+    type: object
+    properties:
+      startDate:
+        $ref: '#/definitions/Class_data_classes_startDate'
+  Class_data:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      description:
+        type: string
+      classes:
+        $ref: '#/definitions/Class_data_classes'
+  Loi_data_lois:
+    type: object
+    properties:
+      gid:
+        type: integer
+        format: int32
+      name:
+        type: string
+  Loi_data:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      description:
+        type: string
+      lois:
+        $ref: '#/definitions/Loi_data_lois'
+  Loiname_data_lois_loinames:
+    type: object
+    properties:
+      gid:
+        type: integer
+      loiname:
+        type: string
+  Loiname_data_lois:
+    type: object
+    properties:
+      gid:
+        type: integer
+        format: int32
+      name:
+        type: string
+      loinames:
+        $ref: '#/definitions/Loiname_data_lois_loinames'
+  Loiname_data:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      description:
+        type: string
+      lois:
+        $ref: '#/definitions/Loiname_data_lois'
+  Filter_data_filters:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+      type:
+        type: string
+  Filter_data:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      description:
+        type: string
+      filters:
+        $ref: '#/definitions/Filter_data_filters'
+  Data_data_periods_features_areas:
+    type: object
+    properties:
+      type:
+        type: integer
+        format: int32
+      area:
+        type: number
+  Data_data_periods_features:
+    type: object
+    properties:
+      loi:
+        type: integer
+        format: int32
+      loiname:
+        type: string
+      areas:
+        $ref: '#/definitions/Data_data_periods_features_areas'
+  Data_data_periods:
+    type: object
+    properties:
+      startDate:
+        $ref: '#/definitions/Period_data_periods_startDate'
+      endDate:
+        $ref: '#/definitions/Period_data_periods_startDate'
+      features:
+        $ref: '#/definitions/Data_data_periods_features'
+  Data_data:
+    type: object
+    properties:
+      name:
+        type: string
+      clazz:
+        type: string
+      periods:
+        $ref: '#/definitions/Data_data_periods'
